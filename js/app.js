@@ -49,10 +49,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let add = a+b+c;
-  let mult = a*b*c;
+  let add = sum(sum(a,b)[0], c)[0];
+  //console.log(add);
+  let mult = multiply(multiply(a,b)[0], c)[0];
+  //console.log(mult);
   let addString = `${a} and ${b} and ${c} sum to ${add}.`;
-  let multString = `The product of ${a} and ${b} and ${c} is ${mult}.`
+  //console.log(addString);
+  let multString = `The product of ${a} and ${b} and ${c} is ${mult}.`;
+  //console.log(multString);
   return [add, mult, addString, multString];
 }
 
@@ -75,7 +79,8 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  let add = testArray[1]+testArray[2]+testArray[3];
+  return [add,`${testArray} was passed in as `]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
