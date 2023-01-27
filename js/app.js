@@ -101,7 +101,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  let mult = multiply(multiply(multArray[0], multArray[1])[0], multArray[2])[0];
+  return [mult, `${multArray} was passed in as an array of numbers, and ${mult} is their sum.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
